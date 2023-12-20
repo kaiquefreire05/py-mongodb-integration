@@ -37,7 +37,7 @@ post = {
 
 posts = db.posts  # Definindo o banco de dados que vai receber as informações
 
-# post_id = posts.insert_one(post).inserted_id  # Inserindo o 'post' no database usando o 'insert_one'
+post_id = posts.insert_one(post).inserted_id  # Inserindo o 'post' no database usando o 'insert_one'
 
 
 # print(post_id)  # Printando a variável
@@ -61,7 +61,7 @@ new_posts = [{
     "date": datetime.datetime(2009, 11, 10, 10, 45)
 }]
 
-# result = posts.insert_many(new_posts)  # Inserindo arquivos no database posts
+result = posts.insert_many(new_posts)  # Inserindo arquivos no database posts
 # print(result.inserted_ids)
 
 print("\nRecuperação final")

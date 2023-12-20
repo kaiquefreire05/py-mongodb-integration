@@ -40,7 +40,17 @@ user_profile_user = [
 ]
 
 print("\nCollections armazenadas no MongoDB: ")
-result = db.profile_user.insert_many(user_profile_user)
-collections = db.list_collection_names()
+# result = db.profile_user.insert_many(user_profile_user)  # Adicionando os docs na collection
+
+collections = db.list_collection_names()  # Pegando apenas os nomes das collections existentes
+
 for collection in collections:
     print(collection)
+
+# db['posts'].drop()  # Excluindo a collection 'posts'
+
+for collection in collections:
+    db[collection].drop()  # Método para excluir todas as collections
+
+print(posts.delete_one({"author": "mike"}))
+print(db.profile_user.drop())
