@@ -65,4 +65,11 @@ new_posts = [{
 # print(result.inserted_ids)
 
 print("\nRecuperação final")
-pprint.pprint(db.posts.find_one({"author": "mike"}))  # Pegando a primeira ocorrência do database
+pprint.pprint(db.posts.find_one({"author": "kaique"}))  # Pegando a primeira ocorrência do database
+
+print("\nDocumentos presentes na coleção post")
+for post in posts.find():  # Recuperando todos as info
+    pprint.pprint(post)
+
+
+
