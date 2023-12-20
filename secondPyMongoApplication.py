@@ -54,3 +54,7 @@ for collection in collections:
 
 print(posts.delete_one({"author": "mike"}))
 print(db.profile_user.drop())
+
+client.drop_database('test')  # Deletando o banco de dados 'test'
+print(db.list_collection_names())
+
